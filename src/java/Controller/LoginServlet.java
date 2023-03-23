@@ -4,7 +4,6 @@ import Admin.Admin;
 import Admin.AdminDB;
 import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
@@ -17,7 +16,6 @@ public class LoginServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private String userID;
-    private String password;
     private String displayName;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -43,7 +41,6 @@ public class LoginServlet extends HttpServlet {
         for (Admin admin : adminList) {
             if (admin.getUsername().equals(user) && admin.getPassword().equals(pwd)) {
                 userID = user;
-                password = pwd;
                 displayName = admin.getDisplayName();
                 loginSuccess = true;
                 break;
