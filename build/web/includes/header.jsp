@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix = "username" uri = "WEB-INF/tlds/showusernametag.tld"%>
 <!DOCTYPE html>
 <html>
     <head>
