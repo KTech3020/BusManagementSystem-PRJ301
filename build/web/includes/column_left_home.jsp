@@ -1,31 +1,22 @@
 <%@page contentType="text/html" pageEncoding="utf-8" %>	
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!-- Sidebar -->
 <div id="sidebar">
     <div class="inner">
-        <!-- Search -->
-        <section id="search" class="alt">
-            <form method="post" action="#">
-                <input type="text" name="query" id="query" placeholder="Search" />
-            </form>
-        </section>
 
         <!-- Menu -->
         <nav id="menu">
             <header class="major">
                 <h2>Menu</h2>
             </header>
-            <style>
-                ul.navigation-menu>li>div{
-                    display: none;
-                }
-                ul.navigation-menu>li:hover>div{
-                    display: block;
-                }
-            </style>
             <ul class="navigation-menu">
                 <li><a href="index.jsp">Trang chủ</a></li>
-                <li><a href="#">Thông tin tuyến xe</a></li>
-                <li><a href="#">Thông tin vé tuần, tháng</a></li>
+                <li><a href="tuyenxe.jsp">Thông tin tuyến xe</a></li>
+                <li><a href="datve.jsp">Đăng kí mua vé tháng</a></li>
+                    <c:if test="${user!=null}">
+                        <li><a href="taixe.jsp">Xem danh sách tài xế</a></li>
+                        <li><a href="khachhang.jsp">Xem thông tin khách hàng</a></li>
+                    </c:if>    
                 <li><a href="#">Liên hệ</a></li>
             </ul>
         </nav>
