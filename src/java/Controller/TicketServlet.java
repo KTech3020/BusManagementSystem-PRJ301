@@ -2,7 +2,6 @@ package Controller;
 
 import Model.Customer;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -15,7 +14,7 @@ public class TicketServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
+        customerList = ConnectDB.getAllCustomer();
         
         Customer c = new Customer();
         if (customerList.isEmpty()){

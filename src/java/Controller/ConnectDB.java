@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Driver;
+import Model.Customer;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -51,10 +52,26 @@ class ConnectDB {
     public static ArrayList<Driver> getAllDriver(){
         ArrayList<Driver> list = new ArrayList<>();
         try(Connection con = getConnectionWithSqlJdbc()) {
-            PreparedStatement stmt = con.prepareStatement("Select * from DE170682");
+            PreparedStatement stmt = con.prepareStatement("Select * from Driver");
             ResultSet  rs = stmt.executeQuery();
             while(rs.next()){
                 list.add(new Driver(rs.getString(1),rs.getString(2),rs.getString(3), rs.getString(4)));
+            }
+            con.close();
+            return list;
+        } catch (Exception ex) {
+            Logger.getLogger(Driver.class.getName()).log(Level.SEVERE, null, ex);
+        }   
+        return null;
+    }
+    
+    public static ArrayList<Customer> getAllCustomer(){
+        ArrayList<Customer> list = new ArrayList<>();
+        try(Connection con = getConnectionWithSqlJdbc()) {
+            PreparedStatement stmt = con.prepareStatement("Select * from Customer");
+            ResultSet  rs = stmt.executeQuery();
+            while(rs.next()){
+                list.add(new Customer(rs.getInt(1),rs.getString(2),rs.getString(3), rs.getInt(4), rs.getInt(5)));
             }
             con.close();
             return list;
