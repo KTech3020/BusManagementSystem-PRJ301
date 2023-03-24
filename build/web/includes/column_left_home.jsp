@@ -17,7 +17,6 @@
                         <li><a href="taixe.jsp">Xem danh sách tài xế</a></li>
                         <li><a href="khachhang.jsp">Xem thông tin khách hàng</a></li>
                     </c:if>    
-                <li><a href="#">Liên hệ</a></li>
             </ul>
         </nav>
 
