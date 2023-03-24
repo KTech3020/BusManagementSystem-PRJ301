@@ -26,7 +26,7 @@ class ConnectDB {
             DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
             con = DriverManager.getConnection(dbURL,dbUser,dbPassword);        
         } catch( SQLException e) {
-            System.out.println("Error: " + e);
+            System.out.println("Error : " + e);
         }
         return con;
     }
