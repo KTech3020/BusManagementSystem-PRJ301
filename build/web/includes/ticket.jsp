@@ -29,7 +29,7 @@
                     <label for="tuyen3">Bến xe Trung tâm Đà Nẵng – Bến xe Ái Nghĩa</label>
                 </div>  
                 <div class="col-3 col-12-small"></div>
-                <div class="col-12 col-12-small">* Tuyến Đà Nẵng – Tam Kỳ không hỗ trợ vé tháng.</div>
+                <div class="col-12 col-12-small">* Tuyến Đà Nẵng – Tam Kỳ không hỗ trợ đăng kí vé tháng.</div>
                 <div class="col-3 col-12-small">
                     <input type="submit" value="Đặt vé">
                 </div>
